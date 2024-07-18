@@ -1,0 +1,49 @@
+[
+  {
+    "id": "boho",
+    "name": "Pacote de Decoração Boho",
+    "category": "decoração",
+    "image": "https://loja.eventosindaia.com.br/static/images/Pacote%20de%20Decora%C3%A7%C3%A3o%20Boho/DSC07899.jpg",
+    "active": true
+  },
+  {
+    "id": "kids",
+    "name": "Espaço Kids",
+    "category": "serviços",
+    "imageName": "01.jpg",
+    "description": "O Espaço Kids foi criado, pensando na comodidade e tranquilidade que esse tipo de ambiente proporciona tanto para os pais, quanto para os convidados, que podem relaxar e aproveitar a refeição, o papo entre os amigos e a festa, sabendo que seus filhos estarão se divertindo e em segurança! Além do espaço, que é composto por cama de elástico, piscina de bolinhas, mesa de desenho, balanços de plástico, quadro de pintura, tv para recreação, tapete de borracha, também contamos com monitores (em caso de contratação) que ficam disponíveis exclusivamente, para cuidar das crianças no espaço!",
+    "environments": "Mezanino (Itapema), Espaço Panorâmico (Itapema), Salão de Eventos (Itapema), Lounge (Itapema), Canto da Lagoa (Florianópolis), Mirante da Lagoa (Florianópolis), Espaço Joinville (Joinville), Castelo Blumenau (Blumenau)",
+    "active": true,
+    "image": "http://loja.eventosindaia.com.br/static/images/Espa%C3%A7o%20Kids/01.jpg"
+  },
+  {
+    "active": true,
+    "category": "decoração",
+    "description": "Bar de LED",
+    "environments": "Mezanino (Itapema), Espaço Panorâmico (Itapema), Salão de Eventos (Itapema), Lounge (Itapema), Canto da Lagoa (Florianópolis), Mirante da Lagoa (Florianópolis), Espaço Joinville (Joinville), Castelo Blumenau (Blumenau)",
+    "id": "bardeled",
+    "image": "https://loja.eventosindaia.com.br/static/images/Bar%20de%20LED/03.jpeg",
+    "imageName": "03.jpeg",
+    "name": "Bar de LED"
+  },
+  {
+    "id": "opencoffee",
+    "name": "Open Coffee",
+    "category": "serviços",
+    "imageName": "01.jpg",
+    "description": "Para os apaixonados por café, agora nossos eventos também contam com o serviço de Open Coffee! Nossa máquina de café é disponibilizada para a utilização durante o evento, onde você e todos os seus convidados poderão degustar de um delicioso cafezinho. Contamos com 7 opções de sabores, sendo eles, café suave, café forte, café c/ leite, cappuccino, mocaccino, chocolate, cappuccino e canela. Além dos itens incluídos, como copos descartáveis de isopor (120ml), adoçante, açúcar, mexedor, o open coffee também conta com a decoração da mesa!",
+    "environments": "Castelo Blumenau (Blumenau), Canto da Lagoa (Florianópolis), Mirante da Lagoa (Florianópolis), Espaço Joinville (Joinville)",
+    "active": true,
+    "image": "http://loja.eventosindaia.com.br/static/images/Open%20Coffee/01.jpg"
+  },
+  {
+    "id": "lovemadeira",
+    "name": "Love Luminoso de Madeira",
+    "category": "decoração",
+    "imageName": "01.jpg",
+    "description": "O letreiro Love Luminoso, é ideal para transformar qualquer ambiente, em um local super romântico! A palavra love significa amor, e garante lindos registros deste momento tão único e especial. A madeira em contraste com as lâmpadas, cria um cenário encantador e apaixonante para as fotos. Se o estilo de decoração do seu evento é rústico, ou se sua cerimônia for na praia, este letreiro vai combinar perfeitamente!",
+    "environments": "Mezanino (Itapema), Espaço Panorâmico (Itapema), Salão de Eventos (Itapema), Lounge (Itapema)",
+    "active": true,
+    "image": "https://loja.eventosindaia.com.br/static/images/Love%20Luminoso%20de%20Madeira/01.jpg"
+  }
+]

@@ -1,0 +1,20 @@
+# Usar a imagem oficial do Node.js
+FROM node:14
+
+# Definir o diretório de trabalho no contêiner
+WORKDIR /var/www/areadocliente/my-ecommerce-app/backend
+
+# Copiar os arquivos package.json e package-lock.json
+COPY backend/package*.json ./
+
+# Instalar as dependências do Node.js
+RUN npm install
+
+# Copiar o código da aplicação para o diretório de trabalho
+COPY backend /var/www/areadocliente/my-ecommerce-app/backend
+
+# Copiar os certificados SSL para o contêiner
+COPY backend/api/loja.eventosindaia.com.br /etc/ssl/loja.eventosindaia.com.br
+
+# Comando para rodar a aplicação Node.js
+CMD ["node", "server.js"]

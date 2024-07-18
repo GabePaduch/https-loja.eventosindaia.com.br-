@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Define o fundo do corpo da página */
+body {
+    @apply bg-gray-100;
+}
+
+/* Estiliza o cabeçalho */
+header {
+    @apply relative text-white flex flex-col justify-center items-center bg-cover bg-center h-96;
+}
+
+/* Estiliza o fundo preto semitransparente no cabeçalho */
+.header-background {
+    @apply absolute top-0 w-full h-full bg-black bg-opacity-50;
+}
+
+/* Estiliza o logo */
+.logo img {
+    @apply w-24 sm:w-36;
+}
+
+/* Posiciona o título do cabeçalho */
+.header-title {
+    @apply absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center;
+}
+
+/* Define o tamanho do texto do título do cabeçalho */
+.header-title h1 {
+    @apply text-2xl sm:text-4xl;
+}
+
+/* Estiliza os botões no cabeçalho */
+.header-buttons {
+    @apply absolute right-5 top-5 flex flex-row flex-wrap items-center space-x-2 mt-12 sm:mt-0;
+}
+
+/* Define a aparência dos botões no cabeçalho */
+.header-buttons button, .header-buttons a {
+    @apply bg-white bg-opacity-20 text-white border border-white py-1 px-2 sm:py-2 sm:px-4 transition duration-300;
+}
+
+/* Define a aparência dos botões no cabeçalho quando o cursor está sobre eles */
+.header-buttons button:hover, .header-buttons a:hover {
+    @apply bg-green-600;
+}
+
+/* Esconde o botão "Voltar à Área do Cliente" em telas menores que 630px */
+@media (max-width: 630px) {
+    .voltar-btn {
+        @apply hidden;
+    }
+}
+
+/* Estiliza a lista de produtos */
+.product-list {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 p-4;
+}
+
+/* Estiliza cada item de produto */
+.product-item {
+    @apply bg-white shadow-lg p-4 m-4;
+}
+
+/* Estiliza a imagem dos produtos */
+.product-item img {
+    @apply w-full mb-4;
+}
+
+/* Estiliza o título dos produtos */
+.product-item h3 {
+    @apply text-lg;
+}
+
+/* Estiliza o link "Veja detalhes" nos produtos */
+.product-item a {
+    @apply text-yellow-600 hover:underline mt-2 block;
+}
+
+/* Estiliza o contêiner dos botões de filtro */
+.filters-container {
+    @apply flex flex-wrap justify-end sm:justify-center space-x-2 sm:space-x-4;
+}
+
+/* Estiliza os botões de filtro */
+.filter-btn {
+    @apply bg-green-500 text-white px-4 py-2 rounded-full my-1;
+}
+
+/* Ajustes adicionais para garantir que os botões de filtro não fiquem "grudados" em telas menores */
+@media (max-width: 630px) {
+    .filters-container {
+        @apply justify-center space-y-2;
+    }
+    .filter-btn {
+        @apply text-center;
+    }
+}

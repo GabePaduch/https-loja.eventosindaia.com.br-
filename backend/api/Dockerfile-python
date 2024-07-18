@@ -1,0 +1,23 @@
+# Usar a imagem oficial do Python
+FROM python:3.9-slim
+
+# Definir o diretório de trabalho no contêiner
+WORKDIR /var/www/areadocliente/my-ecommerce-app/backend/api
+
+# Copiar os arquivos de requisitos
+COPY backend/api/requirements.txt .
+
+# Instalar as dependências do Python
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copiar o código da aplicação para o diretório de trabalho
+COPY backend/api /var/www/areadocliente/my-ecommerce-app/backend/api
+
+# Copiar os certificados SSL para o contêiner
+COPY backend/api/loja.eventosindaia.com.br /etc/ssl/loja.eventosindaia.com.br
+
+# Dar permissão de execução para o script de inicialização
+RUN chmod +x /var/www/areadocliente/my-ecommerce-app/backend/api/start.sh
+
+# Comando para rodar o script de inicialização
+CMD ["/var/www/areadocliente/my-ecommerce-app/backend/api/start.sh"]

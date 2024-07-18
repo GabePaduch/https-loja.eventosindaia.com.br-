@@ -1,0 +1,37 @@
+version: '3.8'
+
+services:
+  python-backend:
+    build:
+      context: .
+      dockerfile: backend/api/Dockerfile-python
+    volumes:
+      - ./backend/api:/var/www/areadocliente/my-ecommerce-app/backend/api
+      - ./src:/var/www/areadocliente/my-ecommerce-app/src
+    environment:
+      - PYTHONUNBUFFERED=1
+    ports:
+      - "5001:5001"
+      - "5002:5002"
+      - "5003:5003"
+
+  node-backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile-node
+    volumes:
+      - ./backend:/var/www/areadocliente/my-ecommerce-app/backend
+      - ./src:/var/www/areadocliente/my-ecommerce-app/src
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+
+  frontend:
+    image: nginx:alpine
+    volumes:
+      - ./build:/usr/share/nginx/html
+    ports:
+      - "8080:80"
+    depends_on:
+      - node-backend
