@@ -45,7 +45,6 @@ Este é um projeto completo de e-commerce desenvolvido com uma stack moderna, ut
    ```bash
    docker-compose up --build
 
-
 ## Estrutura do Projeto
 
 ## React.js:
