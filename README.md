@@ -1,70 +1,70 @@
-# Getting Started with Create React App
+# https-loja.eventosindaia.com.br
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este é um projeto completo de e-commerce desenvolvido com uma stack moderna, utilizando React.js para o frontend, Node.js e Python para o backend, e Docker para facilitar a implantação e a execução do ambiente de desenvolvimento. A aplicação permite a gestão de produtos, incluindo cadastro, edição, exclusão e visualização de detalhes, além de oferecer funcionalidades como carrinho de compras e filtro de produtos.
 
-## Available Scripts
+## Tecnologias Utilizadas
 
-In the project directory, you can run:
+- **Frontend**: React.js
+- **Backend**: Node.js e Python (Flask)
+- **Banco de Dados**: Google Sheets (para pós-vendas)
+- **Conteinerização**: Docker e Docker Compose
+- **Serviços Adicionais**: Flask para APIs, Google Sheets API para gestão de dados
 
-### `npm start`
+## Funcionalidades
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Frontend**:
+  - Exibição de lista de produtos com filtro por categorias
+  - Visualização detalhada de produtos com galeria de imagens
+  - Carrinho de compras com opção de contato via WhatsApp
+  - Página de administração para gestão de produtos
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Backend**:
+  - API RESTful para gestão de produtos e imagens
+  - Upload de imagens com Flask e armazenamento seguro
+  - Integração com Google Sheets para gestão de pós-vendas
+  - Atualização periódica de dados utilizando APScheduler
 
-### `npm test`
+## Como Executar
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/GabePaduch/https-loja.eventosindaia.com.br-.git
+   cd https-loja.eventosindaia.com.br-
 
-### `npm run build`
+2. Instale as dependências do frontend:
+   ```bash
+   cd frontend
+   npm install
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. Instale as dependências do backend:
+   ```bash
+   cd backend
+   npm install
+   
+4. Construa e inicie os contêineres Docker:
+   ```bash
+   docker-compose up --build
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Estrutura do Projeto
 
-### `npm run eject`
+## React.js:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+App.js: Configuração das rotas e componentes principais
+Home.js: Página inicial com filtros de produtos
+Cart.js: Página do carrinho de compras
+Opencoffee.js: Página detalhada do produto "Open Coffee"
+AdminPage.js: Página de administração para cadastro e edição de produtos
+CartContext.js e FilterContext.js: Contextos para gerenciamento de estado
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Python (Flask):
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+imageapi.py: API para gestão de imagens
+images.py: API para upload de imagens
+posvendas.py: API para integração com Google Sheets e atualização de dados
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Docker:
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Dockerfile-python: Configuração do contêiner para o backend Python
+Dockerfile-node: Configuração do contêiner para o backend Node.js
+docker-compose.yml: Configuração do Docker Compose para orquestração dos contêineres
